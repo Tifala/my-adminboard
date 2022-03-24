@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+  <nav> <!-- navbar content here  --> 
+   
+    <div class="nav-wrapper blue">
+      <div class="container">
+
+     
+    <a href="#!" class="brand-logo"><strong> MYadmin</strong></a>
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger"></a>
+    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+    <ul class="right hide-on-med-and-down">
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="posts.html">Posts</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="categories.html">Comments</a></li>
+      <li><a href="user.html">Users</a></li>
+     
+      </ul>
+    </div>
+    </div>
+  
+  </nav>
+
+  <ul id="slide-out" class="sidenav">
+    <li><div class="user-view">
+      <div class="background">
+        <img src="back.jpeg">
+      </div>
+      <a href="#user"><img class="circle" src="av1.jpeg"></a>
+      <a href="#name"><span class=" name">Wahabi Latifatou</span></a>
+      <a href="#email"><span class="email">wahabilatifatougmail.com</span></a>
+    </div></li>
+    <li><a href="index.html"><i class="fa-solid fa-bars"></i>Dashboard</a></li>
+    <li><a href="posts.html">Post</a></li>
+    <li><a href="categories.html">Categories</a></li>
+    <li><a href="comment.html">Comments</a></li>
+    <li><a href="user.html">Users</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Account Controls</a></li>
+    <li><a class="waves-effect" href="#!">LogOut</a></li>
+  </ul>
+              <section>
+
+
+    <div class="row center ">
+        <div class="col s12 m3">
+                  <div class="card-panel  light-blue lighten-2 white-text">
+                    <i class="fa-solid fa-face-smile medium"></i>
+                  <h5>Monthly Visitors</h5>
+                  <h3>35900</h3>
+                  <div class="progress">
+                    <div class="determinate white" style="width: 70%"></div>
+                </div>
+                  </div>
+                </div>
+        <div class="col s12 m3">
+            <div class="card-panel  white black-text">
+                <i class="fa-solid fa-pen medium"></i>
+                <h5>Blog Post</h5>
+                <h3>359</h3>
+                <div class="progress">
+                  <div class="determinate  light-blue lighten-2 " style="width: 30%"></div>
+              </div>
+                </div>
+        </div>
+        <div class="col s12 m3">
+            <div class="card-panel  light-blue lighten-2 white-text">
+                <i class="fa-solid fa-message medium"></i>
+                <h5>Comments</h5>
+                <h3>5900</h3>
+                <div class="progress">
+                  <div class="determinate white" style="width: 50%"></div>
+              </div>
+                </div>
+        </div>
+        <div class="col s12 m3">
+            <div class="card-panel white black-text">
+                <i class="fa-solid fa-user medium"></i>
+                <h5>Users</h5>
+                <h3>900</h3>
+                <div class="progress">
+                  <div class="determinate  light-blue lighten-2 " style="width: 15%"></div>
+              </div>
+                </div>
+        </div>
+    </div>
+
+
+
+
+<!--dialy-start-->
+
+    <div class="row blue lighten-5 "  style="padding-top: 20px;">
+        <div class="col s12 m8 ">
+          <!DOCTYPE HTML>
+          <html>
+          <head>  
+          <script>
+          window.onload = function () {
+          
+          var chart = new CanvasJS.Chart("chartContainer", {
+            animationEnabled: true,
+            theme: "light2",
+            title:{
+              text: "Dialy Visitors"
+            },
+            data: [{        
+              type: "line",
+                  indexLabelFontSize: 16,
+              dataPoints: [
+                { y: 450 },
+                { y: 414},
+                { y: 520, indexLabel: "\u2191 highest",markerColor: "red", markerType: "triangle" },
+                { y: 460 },
+                { y: 450 },
+                { y: 500 },
+                { y: 480 },
+                { y: 480 },
+                { y: 410 , indexLabel: "\u2193 lowest",markerColor: "DarkSlateGrey", markerType: "cross" },
+                { y: 500 },
+                { y: 480 },
+                { y: 510 }
+              ]
+            }]
+          });
+          chart.render();
+          
+          }
+          </script>
+          </head>
+          <body>
+          <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+          <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+          </body>
+          </html>
+        </div>
+        <div class="col s12 m4">
+            <ul class="collection white">
+              <h5 class="" style="padding-left:15px ;">Latest Comments</h5>
+                <li class="collection-item avatar">
+                  <img src="av1.jpeg" alt="" class="circle">
+                  <span class="title"><strong> Rachida Zakou</strong></span>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut, beatae. <br>
+                    <span class="green-text">Approve </span><span class="red-text">Deny</span>
+                  </p>
+                </li>
+          
+           
+                <li class="collection-item avatar">
+                  <img src="av1.jpeg" alt="" class="circle">
+                  <span class="title"><strong> Rachida Zakou</strong></span>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut, beatae. <br>
+                    <span class="green-text">Approve </span><span class="red-text">Deny</span>
+                  </p>
+                </li>
+         
+           
+                <li class="collection-item avatar">
+                  <img src="av1.jpeg" alt="" class="circle">
+                  <span class="title"><strong> Rachida Zakou</strong></span>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut, beatae. <br>
+                    <span class="green-text">Approve </span><span class="red-text">Deny</span>
+                  </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+<!--end-->
+
+
+
+  <!--recente-strat-->
+
+            
+                <div class="row">
+                    <div class="col s12 m8">
+                              <div class="card ">
+                                <div class="card-content black-text">
+                                  <span class="card-title">Posts</span>
+                                  <table class="striped">
+                                    <thead>
+                                      <tr>
+                                          <th>Title</th>
+                                          <th>Category</th>
+                                        
+                                      </tr>
+                                    </thead>
+                            
+                                    <tbody>
+                                      <tr>
+                                        <td>Post One</td>
+                                        <td>Web Development</td>
+                                     
+                                        <td> <button class="btn light-blue accent-2">DETAILS</button></td>
+                                      </tr>
+                                      <tr>
+                                        <td>Post Two</td>
+                                        <td>Graphic DEsign</td>
+                                  
+                                        <td> <button class="btn light-blue accent-2">DETAILS</button></td>
+                                      </tr>
+                                      <tr>
+                                        <td>Post Three</td>
+                                        <td>Web Development</td>
+                                      
+                                        <td> <button class="btn light-blue accent-2">DETAILS</button></td>
+                                      </tr>
+                                     
+                                    </tbody>
+                                  </table>
+                                </div>
+                             
+        </div> 
+        </div>
+
+        <div class="col s12 m4">
+                         <h5>Quick Todos</h5>
+                            <div class="input-field col s12">
+                              
+                              <input type="text" id="autocomplete-input" class="autocomplete">
+                              <label for="autocomplete-input">Add Todo</label>
+                        </div>
+                        <ul class="collapsible">
+                            <li>
+                              <div class="collapsible-header">
+                              Todo One
+                                <span class="badge"><i class="fa-solid fa-xmark green-text"></i></span></div>
+                              <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                            </li>
+                            <li>
+                              <div class="collapsible-header">
+                              Todo Two
+                                <span class="badge"><i class="fa-solid fa-xmark green-text"></i></span></div>
+                              <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                            </li>
+                          </ul>
+                    </div>
+            
+        </div>
+            
+        </section>
+        
+        
+        
+          
+
+
+
+
+  <!--footer-start-->
+  
+  <footer class="section  blue white-text center">
+   
+      <div class="row">
+  <div class="col s12 m12 ">
+  <h6>MYadmin Codeloccol @ 2022</h6>
+  </div>
+  </div>
+ 
+  </footer>
+  <!--end-->
+
+
+
+  <div class="fixed-action-btn">
+    <a class="btn-floating btn-large red">
+      <i class="fa-solid fa-plus"></i>
+    </a>
+    <ul>
+      <li><a href="#modal1" class="btn-floating white-text blue modal-trigger"><i class="fa-solid fa-pen"></i></a></li>
+      <li><a  href="#modal2" class="btn-floating white-text blue modal-trigger"><i class="fa-solid fa-message"></i></a></li>
+      <li><a  href="#modal3" class="btn-floating white-text blue modal-trigger"><i class="fa-solid fa-user-group"></i></a></li>
+    
+    </ul>
+  </div>
+
+
+
+  
+  
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Account Login</h4>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, officia?</p>
+    </div>
+    <div class="input-field">
+      <input type="text" placeholder="First Name">
+    </div>
+    <div class="input-field">
+      <input type="text" placeholder="Last Name">
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+
+  
+
+  <!-- Modal Structure -->
+  <div id="modal2" class="modal">
+    <div class="modal-header bg-success">
+      <h5 class="modal-title" id="exampleModalLabel">Ajouter Categorie</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Title</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-success">Save changes</button>
+    </div>
+    </div>
+  </div>
+
+  
+  
+
+  <!-- Modal Structure -->
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <div class="modal-header bg-warning">
+        <h5 class="modal-title" id="exampleModalLabel">Ajouter un utilisateur</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Name</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">password</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Confirm password</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-warning">Save changes</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!--JavaScript at end of body for optimized loading-->
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.fixed-action-btn');
+  var instances = M.FloatingActionButton.init(elems, {
+    direction: 'top'
+  });
+});
+
+$(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+
+
+  $(document).ready(function(){
+    $('.modal').modal();
+  });
+</script>
+</html>
+
+</body>
